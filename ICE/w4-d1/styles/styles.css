@@ -1,0 +1,41 @@
+/*tag selector*/
+h1 {
+    color: slateblue;
+}
+/*Descendant Selector*/
+footer p {
+    font-size: larger;
+    background-color: lightblue;
+}
+/*class selector*/
+.my-footer {
+    font-size: larger;
+    background-color: lightblue;
+}
+/* ID selector*/
+#my-footer {
+    font-size: larger;
+    background-color: lightblue;
+}
+nav, footer {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+}
+/*pseudo class selector*/
+a:hover {
+    background-color: white;
+    color: steelblue;
+}
+footer p {
+    font-size: 20px;
+    margin: 20px auto;
+}
+img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+body{
+    text-align: center;
+}
