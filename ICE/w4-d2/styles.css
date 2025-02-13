@@ -1,0 +1,10 @@
+body {
+    background-color: steelblue;
+}
+.hover{
+    color: white;
+    transition: color 0.5s ease;
+}
+.hover:hover{
+    color: black;
+}
