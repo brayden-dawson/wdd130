@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Markazi+Text:wght@400..700&display=swap');
 #content{
     max-width: 1600px;
     margin: 0 auto;
@@ -6,6 +7,7 @@ nav a{
     text-align: center;
     color: #d9c2a3;
     text-decoration: none;
+    padding: 35px;
 }
 #hero-msg h1{
     text-align: center
@@ -25,9 +27,13 @@ main section{
 }
 body{
     background-color: #fcfbfb;
+    font-family: 'DM Serif Text', 'markazi text';
+    padding: 0;
+    margin: 0;
 }
 header{
     background-color: rgba(20,30,13, .7);
+    font-family: 'DM Serif Text', 'markazi text';
 }
 nav a:hover{
     background-color: black;
@@ -37,11 +43,19 @@ nav a:hover{
     background-color: darkgreen;
     color: #d9c2a3;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .join{
     background-color: lightblue;
     color: darkblue;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover{
     background-color: green;
@@ -53,22 +67,31 @@ nav a:hover{
 }
 .msg{
     background-color: lightblue;
+    line-height: 1.5em;
+    padding: 35px;
 }
 footer{
     background-color: rgba(20,30,13, .7);
     color: #d9c2a3;
+    padding: 25px 50px;
 }
 .home-title{
     color: darkblue;
+    font-family: 'DM Serif Text', 'markazi text';
+    font-size: 2em;
+    margin-top: 10px;
 }
 h4{
     color: darkblue;
 }
 .msg h2{
     color: darkblue;
+    font-family: 'DM Serif Text', 'markazi text';
 }
 .msg p{
     color: darkblue;
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 footer a{
     color: #d9c2a3;
@@ -82,6 +105,7 @@ footer a:hover{
 }
 .icon{
     width: 80px;
+    padding-top: 10px;
 }
 #hero-img{
     width: 100%;
@@ -91,4 +115,28 @@ footer p{
 }
 footer p a:hover{
     text-decoration: underline;
+}
+h2{
+    margin: 0;
+}
+#logo_link{
+    padding-top: 5px;
+}
+footer .social img{
+    padding-top: 15px;
+}
+.rivers-card{
+    margin: 200px 0;
+}
+.camping-card{
+    margin: 200px 0;
+}
+.rafting-card{
+    margin: 200px 0;
+}
+.card-img{
+    border: 10px solid #d9c2a3;
+}
+main section img{
+    box-sizing: border-box;
 }
