@@ -1,0 +1,207 @@
+/* halloween.css */
+
+/* Import spooky font */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@300;500&display=swap');
+
+/* General Page Style */
+body {
+    background: radial-gradient(circle at top, #1a1a1a 0%, #000000 80%);
+    color: #f8f3e7;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Floating spooky mist */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('https://i.ibb.co/6bgTTMc/mist.png') repeat;
+    opacity: 0.05;
+    animation: drift 60s linear infinite;
+    z-index: -1;
+}
+
+/* Header */
+h1 {
+    color: #ff7518;
+    text-align: center;
+    font-family: "Creepster", cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px 10px #ff4500, 0 0 20px #ff7518;
+    margin-top: 20px;
+    animation: flicker 3s infinite;
+}
+
+/* Section Titles — centered */
+h2, h3, h4 {
+    color: #ffa31a;
+    text-align: center;
+    text-shadow: 1px 1px 6px #ff6600;
+    margin: 25px 0 10px;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #ff6600;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff3300;
+    width: 90%;
+    max-width: 600px;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Navigation List */
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0d0d0d;
+    margin: 0;
+    border-bottom: 3px solid #ff6600;
+    box-shadow: 0 0 15px #ff3300;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    font-family: "Creepster", cursive;
+    color: #ff6600;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-shadow: 0 0 8px #ff3300, 0 0 15px #ff7518;
+    transition: all 0.4s ease;
+    position: relative;
+    animation: subtleFlicker 5s infinite;
+}
+
+/* Glowing hover and dripping animation */
+ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ff3300;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 8px #ff6600;
+}
+
+ul li a:hover {
+    color: #ffb347;
+    text-shadow: 0 0 15px #ff7518, 0 0 25px #ff3300;
+    transform: scale(1.1) rotate(-2deg);
+}
+
+ul li a:hover::after {
+    left: 0;
+    width: 100%;
+    animation: drip 0.8s ease-in-out;
+}
+
+/* Add 🕸️ web and 🦇 bat on hover */
+ul li::before {
+    content: "🕸️";
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+ul li::after {
+    content: "🦇";
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+ul li:hover::before,
+ul li:hover::after {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* Paragraphs */
+p {
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 15px;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-top: 2px solid #ff6600;
+    color: #ffb347;
+    font-size: 0.9em;
+    animation: flicker 5s infinite;
+}
+
+/* --- Animations --- */
+
+/* Glowing text animation */
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300;
+    }
+    50% {
+        text-shadow: 0 0 25px #ff7518, 0 0 40px #ff3300;
+    }
+}
+
+/* Floating image */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Mist drifting in background */
+@keyframes drift {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-500px); }
+}
+
+/* Text flickering effect */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.3; }
+}
+
+/* Subtle flicker for nav */
+@keyframes subtleFlicker {
+    0%, 19%, 21%, 23%, 25%, 100% { opacity: 1; }
+    20%, 24% { opacity: 0.6; }
+}
+
+/* Dripping underline effect */
+@keyframes drip {
+    0% { height: 2px; }
+    50% { height: 8px; background: #ff3300; box-shadow: 0 4px 6px #ff6600; }
+    100% { height: 2px; }
+}
+
+/* Spooky hover glow */
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff7518, 0 0 10px #ff3300; }
+    to { text-shadow: 0 0 20px #ff3300, 0 0 30px #ff7518; }
+}
+
+h1:hover, h2:hover {
+    animation: glow 1.5s infinite alternate;
+}
